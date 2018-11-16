@@ -1,27 +1,32 @@
 <template>
   <div>
-    <nav class="nav-shadow">
-      <div class="container">
-        <a href="/">
-        <img src="http://bit.ly/vue-img"/>
-        </a>
-      </div>
-    </nav>
+    <app-header></app-header>
     <section class="main-section section">
-    </section>
-    <footer class="footer">
-      <div class="container">
-        <div class="content has-text-centered">
-          Follow me on
-          <a href="https://twitter.com/FKanaiza"
-          target="_blank">Twitter</a>
-        </div>
+      <div class="container content">
+        <category></category>
       </div>
-    </footer>
+    </section>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-  export default {}
+  import AppHeader from './AppHeader.vue'
+  import AppFooter from './AppFooter.vue'
+  import Category from './Category.vue'
+  
+  export default {
+    components: {
+      'app-header': AppHeader,
+      'app-footer': AppFooter,
+      'category': Category
+    }
+  }
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+$primary: #287ab1;
+  @import '~bulma';
+  .columns{
+    flex-wrap: wrap
+  }
+</style>
