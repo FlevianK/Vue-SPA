@@ -1,18 +1,17 @@
-const path = require("path");
+const path = require('path');
 
 const config = {
   entry: {
-    app: path.resolve(__dirname, "../src/index.js")
+    app: path.resolve(__dirname, '../src/index.js')
   },
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        // test: /(\.js$)|(\.vue$)/,
-        test: /(\.js$)/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/
-      },
+      // {
+      //   enforce: 'pre',
+      //   test: /(\.js$)|(\.vue$)/,
+      //   loader: 'eslint-loader',
+      //   exclude: /node_modules/
+      // },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -29,10 +28,10 @@ const config = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, "../dist"),
-    publicPath: "/",
-    filename: "assets/js/[name].js"
+    path: path.resolve(__dirname, '../dist'),
+    publicPath: '/',
+    filename: 'assets/js/[name].js'
   }
-};
+}
 
-module.exports= config;
+module.exports = config
