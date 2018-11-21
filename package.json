@@ -10,10 +10,14 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "bulma": "^0.7.2",
-    "express": "^4.16.4",
-    "vue": "^2.5.17",
-    "vue-router": "^3.0.1"
+    "axios": "^0.16.2",
+    "bulma": "^0.5.1",
+    "express": "^4.15.4",
+    "serialize-javascript": "^1.5.0",
+    "vue": "^2.4.2",
+    "vue-router": "^2.7.0",
+    "vue-server-renderer": "^2.5.17",
+    "vuex": "^2.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -21,6 +25,7 @@
     "acorn": "^6.0.4",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "eslint": "^5.9.0",
     "eslint-config-standard": "^12.0.0",
@@ -38,6 +43,7 @@
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-middleware": "^3.4.0",
-    "webpack-hot-middleware": "^2.24.3"
+    "webpack-hot-middleware": "^2.24.3",
+    "webpack-node-externals": "^1.7.2"
   }
 }

@@ -2,7 +2,19 @@ const path = require('path');
 
 const config = {
   entry: {
-    app: path.resolve(__dirname, '../src/index.js')
+    app: path.resolve(__dirname, '../src/client-entry.js'),
+    vendor: ['vue', 'vue-router', 'vuex', 'axios']
+  },
+  optimization: {
+    splitChunks: {
+        cacheGroups: {
+            commons: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendor',
+                chunks: 'all'
+            }
+        }
+    }
   },
   module: {
     rules: [
